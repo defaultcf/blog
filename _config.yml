@@ -1,15 +1,20 @@
 title: Isaacの呟き
+name: Isaacの呟き
 email: leo@i544c.me
 description: WebエンジニアモドキのIsaacのブログ。オタクな話を綴ります。
 baseurl: ""
 url: "https://blog.i544c.me"
-twitter_username: _leo_isaac
-github_username:  i544c
+domain_name: "https://blog.i544c.me"
 
 # Build settings
-theme: minima
+remote_theme: rosario/kasper
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
+  - jekyll-paginate
+
+paginate: 5
+paginate_path: "/page/:num"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
