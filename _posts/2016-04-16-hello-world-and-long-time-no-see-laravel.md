@@ -1,6 +1,6 @@
 ---
 title: "こんにちは、世界。久しぶり、Laravel。"
-date: "2016-04-16"
+date: "2016-04-17"
 layout: "post"
 ---
 

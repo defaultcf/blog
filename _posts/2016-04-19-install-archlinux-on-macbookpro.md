@@ -1,6 +1,6 @@
 ---
 title: "MacBookProにArchLinuxを入れる"
-date: "2016-04-19"
+date: "2016-04-20"
 layout: "post"
 ---
 

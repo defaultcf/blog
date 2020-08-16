@@ -1,6 +1,6 @@
 ---
 title: "大学生活でLinuxを使う"
-date: "2019-12-11"
+date: "2019-12-12"
 layout: "post"
 ---
 

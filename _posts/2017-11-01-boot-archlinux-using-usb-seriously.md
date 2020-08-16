@@ -1,6 +1,6 @@
 ---
 title: "真面目にArchLinuxをUSBブートする"
-date: "2017-11-01"
+date: "2017-11-02"
 layout: "post"
 ---
 

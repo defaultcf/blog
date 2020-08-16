@@ -1,6 +1,6 @@
 ---
 title: "VPSのセットアップ"
-date: "2016-06-24"
+date: "2016-06-25"
 layout: "post"
 ---
 

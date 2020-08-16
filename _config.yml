@@ -1,7 +1,8 @@
 title: Isaacの呟き
 name: Isaacの呟き
 email: leo@i544c.me
-description: WebエンジニアモドキのIsaacのブログ。オタクな話を綴ります。
+description: WebエンジニアモドキのIsaacのブログ、オタクな話を綴ります
+meta_description: WebエンジニアモドキのIsaacのブログ、オタクな話を綴ります
 baseurl: ""
 url: "https://blog.i544c.me"
 domain_name: "https://blog.i544c.me"
@@ -13,7 +14,7 @@ plugins:
   - jekyll-remote-theme
   - jekyll-paginate
 
-paginate: 5
+paginate: 10
 paginate_path: "/page/:num"
 
 # Exclude from processing.

@@ -1,5 +1,5 @@
 ---
-title: "Docker Swarmを使い始めた"
+title: Docker Swarmを使い始めた
 date: "2019-06-11"
 layout: "post"
 ---

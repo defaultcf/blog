@@ -1,6 +1,6 @@
 ---
 title: "Arch LinuxをUSBにインストールする"
-date: "2016-04-17"
+date: "2016-04-18"
 layout: "post"
 ---
 
