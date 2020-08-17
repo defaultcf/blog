@@ -6,6 +6,7 @@ meta_description: WebエンジニアモドキのIsaacのブログ、オタクな
 baseurl: ""
 url: "https://blog.i544c.me"
 domain_name: "https://blog.i544c.me"
+permalink: /:year/:month/:day/:title/
 
 # Build settings
 remote_theme: rosario/kasper
