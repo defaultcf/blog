@@ -1,0 +1,65 @@
+---
+layout: post
+title:  "さようなら、2020年"
+date:   2020-12-31 20:52:00 +0900
+categories: tweet
+---
+
+2020年は酷かった。
+
+まず、COVID-19によるパンデミックが、ずっと世間に暗い影を落としていた。
+私の就活もあった。難なく進むかな、などと軽く考えていたら、散々な結果が続いた。
+そして、VTuber文化に救われた。
+
+
+## 就活
+色んな会社を受けたが、落ち続けた。自分のせいなのか、COVID-19のせいなのか分からず、陰鬱とした日々だった。
+それでも社会人になることを諦められず、細々と就活を続けた結果、なんとかベンチャー企業から内定を頂戴した。
+
+今はこれ以上書く気になれない。
+
+
+## VTuber
+VTuberの存在自体2018年から知っていたが、2020年3月あたりからドハマりした。
+特にホロライブ3,4期生にハマって、わための歌、あさココを毎朝見ていた。
+VTuberという存在についての思考も楽しく、よく考察記事を漁ってもいた。
+
+適当にまとめたページを書いたりもした...
+[i544c/VTuber](https://scrapbox.io/i544c/VTuber)
+
+
+## プログラミング
+今までスクリプト言語を中心に書いてきたが、2020年は型の便利さを改めて学んだ。TypeScriptを書いたり、Elixirを学んだりした。
+VTuberに寄与できたらと、幾つか簡単なものを作ったりもした。
+
+#### vGIF
+[github.com/i544c/vgif](https://github.com/i544c/vgif)
+
+VTuberのAnimated GIFを共有できる、ウェブアプリケーション。
+Rails製。デプロイはHerokuにして、画像のホストはS3にした。
+
+#### YouTube Sticky Live Chat
+[greasyfork.org/ja/scripts/402617-youtube-sticky-live-chat](https://greasyfork.org/ja/scripts/402617-youtube-sticky-live-chat)
+
+YouTubeのライブチャットで、放送主かモデレータのコメントを一番上に固定して表示する、UserScript。
+（その後、YouTubeは公式に投稿主のコメントをトップに固定できる機能をリリースした）
+
+#### Nico Excluder
+[greasyfork.org/ja/scripts/405548-nico-excluder](https://greasyfork.org/ja/scripts/405548-nico-excluder)
+
+ニコニコ動画のランキングページから、指定したユーザの投稿した動画を非表示にする、UserScript。
+珍しくちゃんとクラス使って綺麗に書いたなぁ...
+
+#### 大神ミオ通知bot
+[twitter.com/mio_bot](https://twitter.com/mio_bot)
+
+年の瀬に大神ミオちゃんのTwitterアカウントが凍結してしまった。大神ミオちゃんはYouTubeのライブで、公開を2年ほど先に指定した枠を立てて、そこのライブチャットでファンたちと対話している。
+しかし、ライブチャットでは過去のコメントが流れてしまって、大神ミオちゃんの発言が遡れない。
+
+なので、ライブチャットを監視して、大神ミオちゃんの発言が来たらTwitterで呟くbotを作った。
+今度、技術記事を書こうかなと思っている。
+
+
+## おわり
+2020年は酷かった。でも、VTuberに救われた。
+来年はさっさと卒業し、東京に引っ越して、ソフトウェアエンジニアとして生きる予定。
