@@ -4,8 +4,9 @@ email: leo@i544c.me
 description: WebエンジニアモドキのIsaacのブログ、オタクな話を綴ります
 meta_description: WebエンジニアモドキのIsaacのブログ、オタクな話を綴ります
 baseurl: ""
-url: "https://blog.i544c.me"
-domain_name: "https://blog.i544c.me"
+url: "https://default.cf/blog/"
+domain_name: "https://default.cf"
+baseurl: "/blog"
 permalink: /:year/:month/:day/:title/
 
 # Build settings
