@@ -1,8 +1,8 @@
-title: Isaacの呟き
-name: Isaacの呟き
-email: leo@i544c.me
-description: WebエンジニアモドキのIsaacのブログ、オタクな話を綴ります
-meta_description: WebエンジニアモドキのIsaacのブログ、オタクな話を綴ります
+title: default.cf/blog
+name: default.cf/blog
+email: nil
+description: ヲタクな話を書きます。
+meta_description: ヲタクな話を書きます。
 baseurl: ""
 url: "https://default.cf/blog/"
 domain_name: "https://default.cf"
