@@ -14,10 +14,22 @@ remote_theme: rosario/kasper
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
+  - jekyll-seo-tag
   - jekyll-paginate
 
 paginate: 10
 paginate_path: "/page/:num"
+
+twitter:
+  username: defaultcf
+  card: summary
+
+social:
+  name: defaultcf
+  links:
+    - https://keybase.io/defaultcf
+    - https://github.com/defaultcf
+    - https://twitter.com/defaultcf
 
 # Exclude from processing.
 # The following items will not be processed, by default.
