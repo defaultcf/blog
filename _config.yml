@@ -4,7 +4,7 @@ email: nil
 description: ヲタクな話を書きます。
 meta_description: ヲタクな話を書きます。
 baseurl: ""
-url: "https://default.cf/blog/"
+url: "https://default.cf"
 domain_name: "https://default.cf"
 baseurl: "/blog"
 permalink: /:year/:month/:day/:title/
@@ -13,9 +13,10 @@ permalink: /:year/:month/:day/:title/
 remote_theme: rosario/kasper
 plugins:
   - jekyll-feed
+  - jekyll-paginate
   - jekyll-remote-theme
   - jekyll-seo-tag
-  - jekyll-paginate
+  - jekyll-sitemap
 
 paginate: 10
 paginate_path: "/page/:num"
