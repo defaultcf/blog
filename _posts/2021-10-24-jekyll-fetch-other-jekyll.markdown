@@ -69,7 +69,18 @@ jobs:
 
 ## ブログを書いて master にプッシュしたら、ポートフォリオサイトの action が発火され更新される
 GitHub REST API を叩いて、他の workflow を発火することができるらしい。
-ブログ側の action をこのように書いた。これでいけるはず...
+ブログ側の action をこのように書いた。~~これでいけるはず...~~
+
+GITHUB_TOKEN の部分は、secrets.GITHUB_TOKEN を使うと失敗する。
+[https://docs.github.com/en/actions/security-guides/encrypted-secrets#using-encrypted-secrets-in-a-workflow](https://docs.github.com/en/actions/security-guides/encrypted-secrets#using-encrypted-secrets-in-a-workflow)
+
+> you can use the secrets context to access secrets you've created in your repository
+
+`secrets.GITHUB_TOKEN` は、そのアクション1回限りで有効で、且つそのリポジトリにだけ機能するアクセス権限が与えられる。
+つまり、他のリポジトリの workflow を発火できない。
+
+ここでのトークンは、personal access token を使うことにした。
+repo 全てと、workflow にチェックを入れた。
 
 `.github/workflows/kick-portfolio.yml`
 ```yaml
@@ -89,10 +100,14 @@ jobs:
           repo: defaultcf.github.io
           workflow_id: create-blog-link.yml
         env:
-          GITHUB_TOKEN: {% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}
+          GITHUB_TOKEN: {% raw %}${{ secrets.KICK_WORKFLOW_TOKEN }}{% endraw %}
 ```
 
 ---
 
-以上。さて、この記事を push したら、workflow がまわるかな...？
-結果が出たら、この記事を更新する。
+以上。~~さて、この記事を push したら、workflow がまわるかな...？~~
+~~結果が出たら、この記事を更新する。~~
+
+GITHUB_TOKEN の部分で引っかかっていた。Personal access token に変更し、再度 push すると、ブログ側の action が動いて、ポートフォリオサイト側の action がキックされ、ポートフォリオサイトが更新された！
+
+普段は Bitbucket pipeline を使っているので、GitHub Actions は久々だったが、やっぱ GitHub Actions も良いな...フックが充実している...
