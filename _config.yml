@@ -8,6 +8,7 @@ url: "https://default.cf"
 domain_name: "https://default.cf"
 baseurl: "/blog"
 permalink: /:year/:month/:day/:title/
+timezone: Asia/Tokyo
 
 # Build settings
 remote_theme: rosario/kasper

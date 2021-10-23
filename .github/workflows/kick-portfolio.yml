@@ -1,0 +1,17 @@
+name: Kick portfolio
+on:
+  push:
+    branches:
+      - master
+jobs:
+  post-api:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: octokit/request-action@v2.x
+        with:
+          route: POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches
+          owner: defaultcf
+          repo: defaultcf.github.io
+          workflow_id: create-blog-link.yml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
