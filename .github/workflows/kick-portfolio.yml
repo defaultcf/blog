@@ -13,5 +13,6 @@ jobs:
           owner: defaultcf
           repo: defaultcf.github.io
           workflow_id: create-blog-link.yml
+          ref: master
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.KICK_WORKFLOW_TOKEN }}
