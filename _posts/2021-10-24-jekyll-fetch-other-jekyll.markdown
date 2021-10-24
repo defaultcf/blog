@@ -10,7 +10,7 @@ Jekyll で作っている2つのサイトがある。
 - [default.cf](https://default.cf/) ←ポートフォリオサイト
 - [default.cf/blog](https://default.cf/blog/) ←ブログ
 
-同じドメインでホストしているが、これらは別々のリポジトリで GitHub Pages を使ってビルドされている。そのため、ドメインを跨いで情報を取得することは基本的にはできない。
+同じドメインでホストしているが、これらは別々のリポジトリで GitHub Pages を使ってビルドされている。そのため、静的ビルド時にリポジトリを跨いで情報を取得・反映するには一手間要る。JavaScript で fetch, parse, render は、SEO の観点からしないものとする。
 
 今回は、ポートフォリオサイト上にブログのリンクを表示したい。
 色々考えた末、jekyll-feed で生成される feed.xml を、何らかの方法でポートフォリオの `_data/feed.json` に置くことができれば良いとなった。
@@ -52,9 +52,10 @@ jobs:
       - run: sudo apt update && sudo apt install -y libxml-compile-perl libjson-xs-perl
       - uses: actions/checkout@v2
       - run: |
-          curl https://default.cf/blog/feed.xml |\
-          sed -e 's/xmlns=/xmlns:atom=/' |\
-          xml2json -x - -s feed.xsd > _data/feed.json
+          curl https://default.cf/blog/feed.xml \
+            | sed -e 's/xmlns=/xmlns:atom=/' \
+            | xml2json -x - -s feed.xsd \
+            > _data/feed.json
       - uses: EndBug/add-and-commit@v7
         with:
           message: 'Update feed.json'
@@ -62,7 +63,7 @@ jobs:
           committer_email: 41898282+github-actions[bot]@users.noreply.github.com
 ```
 
-これだけで済むのだから、GitHub Marketplace 様様だ。
+uses を使って checkout と commit は簡単に済ませられる。GitHub Marketplace 様様だ。
 
 手動で workflow を実行して、feed 取得・JSON に変換・コミットが為されることを確認する。
 
@@ -99,6 +100,7 @@ jobs:
           owner: defaultcf
           repo: defaultcf.github.io
           workflow_id: create-blog-link.yml
+          ref: master
         env:
           GITHUB_TOKEN: {% raw %}${{ secrets.KICK_WORKFLOW_TOKEN }}{% endraw %}
 ```
@@ -108,6 +110,6 @@ jobs:
 以上。~~さて、この記事を push したら、workflow がまわるかな...？~~
 ~~結果が出たら、この記事を更新する。~~
 
-GITHUB_TOKEN の部分で引っかかっていた。Personal access token に変更し、再度 push すると、ブログ側の action が動いて、ポートフォリオサイト側の action がキックされ、ポートフォリオサイトが更新された！
+GITHUB_TOKEN の部分で引っかかっていた。Personal access token に変更し、再度 push すると、ブログ側の action が動いて、ポートフォリオサイト側の action を発火し、ポートフォリオサイトが更新された！
 
-普段は Bitbucket pipeline を使っているので、GitHub Actions は久々だったが、やっぱ GitHub Actions も良いな...フックが充実している...
+普段、業務で Bitbucket pipeline を使っているので、GitHub Actions は久々だったが、やっぱ GitHub Actions も良いな...フックが充実している。
